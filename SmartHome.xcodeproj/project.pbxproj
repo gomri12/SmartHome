@@ -13,6 +13,7 @@
 		FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */; };
 		FB7FAFCE1D140EEC009EF911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */; };
 		FB7FAFD11D140EEC009EF911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */; };
+		FB7FAFD91D142115009EF911 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFD81D142115009EF911 /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7FAFD01D140EEC009EF911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7FAFD21D140EEC009EF911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB7FAFD81D142115009EF911 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */,
 				FB7FAFD21D140EEC009EF911 /* Info.plist */,
 				FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */,
+				FB7FAFD81D142115009EF911 /* MyButton.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */,
 				FB7FAFC61D140EEC009EF911 /* ViewController.swift in Sources */,
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
+				FB7FAFD91D142115009EF911 /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

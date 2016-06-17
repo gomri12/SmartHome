@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1IY-au-tel">
+                                <rect key="frame" x="215" y="93" width="170" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-tV-zqh">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="85"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vSu-0w-bqD">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="85"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sog-gF-hK9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="85"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwZ-CQ-8kR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="85"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="usernameTB" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FxA-l1-abq">
+                                <rect key="frame" x="215" y="220" width="170" height="30"/>
+                                <color key="textColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-GX-jz5">
+                                <rect key="frame" x="215" y="271" width="170" height="30"/>
+                                <color key="textColor" red="0.69308894230769225" green="0.69308894230769225" blue="0.69308894230769225" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-av-b7s" customClass="MyButton" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="215" y="344" width="170" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="thH-14-Dws"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isI-L5-3f7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.45456408618291544" blue="0.38730914905799163" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="B1k-av-b7s" firstAttribute="top" secondItem="ah5-GX-jz5" secondAttribute="bottom" constant="43" id="4mI-GE-ASe"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="trailing" secondItem="1IY-au-tel" secondAttribute="trailing" id="8rr-SL-7J1"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="leading" secondItem="B1k-av-b7s" secondAttribute="leading" id="Fsk-22-qPr"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="trailing" secondItem="B1k-av-b7s" secondAttribute="trailing" id="I5u-Mj-YNH"/>
+                            <constraint firstItem="ah5-GX-jz5" firstAttribute="top" secondItem="FxA-l1-abq" secondAttribute="bottom" constant="21" id="M28-1o-RbX"/>
+                            <constraint firstItem="1IY-au-tel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFy-ET-hPH"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="top" secondItem="1IY-au-tel" secondAttribute="bottom" constant="42" id="TxT-Zj-yNS"/>
+                            <constraint firstItem="1IY-au-tel" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Z0w-xd-7gG"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="leading" secondItem="1IY-au-tel" secondAttribute="leading" id="bwS-4R-AdC"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="leading" secondItem="ah5-GX-jz5" secondAttribute="leading" id="e9f-Lf-CRn"/>
+                            <constraint firstItem="FxA-l1-abq" firstAttribute="trailing" secondItem="ah5-GX-jz5" secondAttribute="trailing" id="kdw-wg-72D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTB" destination="ah5-GX-jz5" id="HRM-vf-bLq"/>
+                        <outlet property="usernameTB" destination="FxA-l1-abq" id="Gad-Bc-9Vr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="557" y="382"/>
         </scene>
     </scenes>
 </document>
