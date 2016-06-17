@@ -14,7 +14,7 @@ class MyButton: UIButton {
         super.init(coder: aDecoder)!
         self.layer.cornerRadius = 5.0;
 
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 0
         self.backgroundColor = UIColor(red: 22/256, green: 160/256, blue: 134/256, alpha: 1)
         self.tintColor = UIColor.whiteColor()
         
