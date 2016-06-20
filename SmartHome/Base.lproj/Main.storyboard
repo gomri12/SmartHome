@@ -14,23 +14,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="usernameTB" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FxA-l1-abq">
-                                <rect key="frame" x="215" y="220" width="170" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="usernameTB" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FxA-l1-abq">
+                                <rect key="frame" x="76" y="220" width="170" height="30"/>
                                 <color key="textColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-GX-jz5">
-                                <rect key="frame" x="215" y="271" width="170" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-GX-jz5">
+                                <rect key="frame" x="76" y="271" width="170" height="30"/>
                                 <color key="textColor" red="0.69308894230769225" green="0.69308894230769225" blue="0.69308894230769225" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1IY-au-tel">
-                                <rect key="frame" x="215" y="93" width="170" height="85"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1IY-au-tel">
+                                <rect key="frame" x="76" y="93" width="170" height="85"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-tV-zqh">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="85"/>
@@ -55,8 +55,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-av-b7s">
-                                <rect key="frame" x="215" y="344" width="170" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-av-b7s">
+                                <rect key="frame" x="76" y="345" width="170" height="39"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.62745098039215685" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="thH-14-Dws"/>
@@ -91,6 +91,7 @@
                             <constraint firstItem="FxA-l1-abq" firstAttribute="trailing" secondItem="ah5-GX-jz5" secondAttribute="trailing" id="kdw-wg-72D"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="passwordTB" destination="ah5-GX-jz5" id="HRM-vf-bLq"/>
                         <outlet property="usernameTB" destination="FxA-l1-abq" id="Gad-Bc-9Vr"/>
@@ -98,7 +99,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="382"/>
+            <point key="canvasLocation" x="-158" y="-1450"/>
+        </scene>
+        <!--Device List Table View Controller-->
+        <scene sceneID="EO4-cf-pPm">
+            <objects>
+                <tableViewController id="Zbe-cB-YJv" customClass="DeviceListTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="bY3-JE-64g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="ZJh-VQ-1Sc" customClass="DeviceTableCell" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZJh-VQ-1Sc" id="lzs-Rd-YVC">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zhd-5j-3rQ">
+                                            <rect key="frame" x="6" y="6" width="56" height="56"/>
+                                        </imageView>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efi-DZ-isS">
+                                            <rect key="frame" x="263" y="18" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-2N-FNp">
+                                            <rect key="frame" x="70" y="6" width="120" height="56"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceImage" destination="zhd-5j-3rQ" id="nP3-x0-Xbe"/>
+                                    <outlet property="deviceLabel" destination="ACv-2N-FNp" id="V4K-is-oX6"/>
+                                    <outlet property="deviceSwitch" destination="efi-DZ-isS" id="Pcf-c3-IP5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zbe-cB-YJv" id="5r9-SI-MAt"/>
+                            <outlet property="delegate" destination="Zbe-cB-YJv" id="PIK-b7-Svf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cnT-Rb-YbC"/>
+                    <connections>
+                        <outlet property="deviceTableView" destination="bY3-JE-64g" id="hL7-EO-JI0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S99-Si-dxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-1600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oi9-L2-MHx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bTi-Qr-jcd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7O7-7x-1qR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zbe-cB-YJv" kind="relationship" relationship="rootViewController" id="kEk-es-16K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXE-NJ-RAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="-1600"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default_icon" width="70" height="70"/>
+    </resources>
 </document>
