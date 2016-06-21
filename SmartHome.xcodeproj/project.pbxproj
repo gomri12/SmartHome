@@ -11,6 +11,7 @@
 		F910F4111D186454007E5C72 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */; };
 		F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */; };
 		F9577CFA1D17F677005F7F25 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */; };
+		F9F1405D1D19D829002DF211 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F1405C1D19D829002DF211 /* Device.swift */; };
 		FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */; };
 		FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */; };
 		FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFC71D140EEC009EF911 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableCell.swift; sourceTree = "<group>"; };
 		F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
+		F9F1405C1D19D829002DF211 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FB7FAFC01D140EEC009EF911 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				FB7FAFD21D140EEC009EF911 /* Info.plist */,
 				FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */,
 				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
+				F9F1405C1D19D829002DF211 /* Device.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */,
 				FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */,
 				FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */,
+				F9F1405D1D19D829002DF211 /* Device.swift in Sources */,
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
