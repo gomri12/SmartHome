@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginBTN(sender: AnyObject) {
+        
     }
 
 }
