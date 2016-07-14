@@ -6,6 +6,10 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
+=======
+      "filename" : "light_icon.png",
+>>>>>>> origin/master
       "scale" : "2x"
     },
     {

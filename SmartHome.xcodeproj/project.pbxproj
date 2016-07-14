@@ -11,8 +11,12 @@
 		F910F4111D186454007E5C72 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */; };
 		F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */; };
 		F9577CFA1D17F677005F7F25 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */; };
+<<<<<<< HEAD
 		FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */; };
 		FB2FEBB21D32B7540078F85C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FEBB11D32B7540078F85C /* Device.swift */; };
+=======
+		F9F1405D1D19D829002DF211 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F1405C1D19D829002DF211 /* Device.swift */; };
+>>>>>>> origin/master
 		FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */; };
 		FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */; };
 		FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFC71D140EEC009EF911 /* Main.storyboard */; };
@@ -81,12 +85,16 @@
 		F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableCell.swift; sourceTree = "<group>"; };
 		F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB091F011D312CC3003DEFAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		FB2FEBB11D32B7540078F85C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FB469E991D32A279007B72E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		FB469EA21D32A285007B72E1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FB469EA41D32A296007B72E1 /* SmartHome */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SmartHome; sourceTree = "<group>"; };
+=======
+		F9F1405C1D19D829002DF211 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+>>>>>>> origin/master
 		FB7FAFC01D140EEC009EF911 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +184,12 @@
 				FB7FAFD21D140EEC009EF911 /* Info.plist */,
 				FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */,
 				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
+<<<<<<< HEAD
 				FB091F011D312CC3003DEFAF /* Firebase.framework */,
 				FB2FEBB11D32B7540078F85C /* Device.swift */,
+=======
+				F9F1405C1D19D829002DF211 /* Device.swift */,
+>>>>>>> origin/master
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -368,7 +380,11 @@
 				F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */,
 				FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */,
 				FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */,
+<<<<<<< HEAD
 				FB2FEBB21D32B7540078F85C /* Device.swift in Sources */,
+=======
+				F9F1405D1D19D829002DF211 /* Device.swift in Sources */,
+>>>>>>> origin/master
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

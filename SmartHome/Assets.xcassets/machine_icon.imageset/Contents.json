@@ -6,7 +6,11 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "filename" : "^C6DCAF3A314AEC8C7FC9D5F316EB9259E470D35DB9F48F813F^pimgpsh_thumbnail_win_distr.jpg",
+=======
+      "filename" : "machine_icon.png",
+>>>>>>> origin/master
       "scale" : "2x"
     },
     {

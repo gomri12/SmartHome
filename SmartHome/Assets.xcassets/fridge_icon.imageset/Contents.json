@@ -6,7 +6,11 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
       "filename" : "^FE8558A83117CDFB8B338F281F39866AE83410BC0886AA9DEE^pimgpsh_fullsize_distr.png",
+=======
+      "filename" : "fridge_icon.png",
+>>>>>>> origin/master
       "scale" : "2x"
     },
     {
