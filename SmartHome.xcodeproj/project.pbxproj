@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F910F40F1D184FC9007E5C72 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F910F3FF1D184E64007E5C72 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E86D8D6D6EE6C414A87CE196 /* Pods_SmartHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FC82278F10A90B91F52FC /* Pods_SmartHome.framework */; };
 		F910F4111D186454007E5C72 /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */; };
 		F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */; };
 		F9577CFA1D17F677005F7F25 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */; };
+		FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */; };
+		FB2FEBB21D32B7540078F85C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FEBB11D32B7540078F85C /* Device.swift */; };
 		FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */; };
 		FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */; };
 		FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFC71D140EEC009EF911 /* Main.storyboard */; };
@@ -69,33 +71,22 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		F910F40C1D184F6E007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F910F40E1D184F78007E5C72 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F910F40F1D184FC9007E5C72 /* Alamofire.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		42151545F1711CDA8057C917 /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
+		45AC2AF87019FC8A9A2EAB52 /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9FC82278F10A90B91F52FC /* Pods_SmartHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableCell.swift; sourceTree = "<group>"; };
 		F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
+		FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB091F011D312CC3003DEFAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		FB2FEBB11D32B7540078F85C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		FB469E991D32A279007B72E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		FB469EA21D32A285007B72E1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FB469EA41D32A296007B72E1 /* SmartHome */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SmartHome; sourceTree = "<group>"; };
 		FB7FAFC01D140EEC009EF911 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -107,16 +98,37 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FB7FAFBD1D140EEC009EF911 /* Frameworks */ = {
+		A048E3EB5EBC4332D8D6EF3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86D8D6D6EE6C414A87CE196 /* Pods_SmartHome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63FB89C1677339ECC94E8025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45AC2AF87019FC8A9A2EAB52 /* Pods-SmartHome.debug.xcconfig */,
+				42151545F1711CDA8057C917 /* Pods-SmartHome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7B13997292C2987BAD4AF819 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB469EA41D32A296007B72E1 /* SmartHome */,
+				FB469EA21D32A285007B72E1 /* libc++.tbd */,
+				FB469E991D32A279007B72E1 /* libicucore.tbd */,
+				DA9FC82278F10A90B91F52FC /* Pods_SmartHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F910F3F51D184E64007E5C72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +146,12 @@
 		FB7FAFB71D140EEC009EF911 = {
 			isa = PBXGroup;
 			children = (
+				FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */,
 				FB7FAFC21D140EEC009EF911 /* SmartHome */,
 				FB7FAFC11D140EEC009EF911 /* Products */,
 				F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */,
+				63FB89C1677339ECC94E8025 /* Pods */,
+				7B13997292C2987BAD4AF819 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +176,8 @@
 				FB7FAFD21D140EEC009EF911 /* Info.plist */,
 				FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */,
 				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
+				FB091F011D312CC3003DEFAF /* Firebase.framework */,
+				FB2FEBB11D32B7540078F85C /* Device.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -172,15 +189,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB7FAFD51D140EEC009EF911 /* Build configuration list for PBXNativeTarget "SmartHome" */;
 			buildPhases = (
+				7528011C91E01A26DA88CFB8 /* [CP] Check Pods Manifest.lock */,
 				FB7FAFBC1D140EEC009EF911 /* Sources */,
-				FB7FAFBD1D140EEC009EF911 /* Frameworks */,
 				FB7FAFBE1D140EEC009EF911 /* Resources */,
-				F910F40E1D184F78007E5C72 /* CopyFiles */,
+				9A28AC8C39BFE3A0AEFEAAC8 /* [CP] Embed Pods Frameworks */,
+				C051DC02FE6A3E8244B11C1F /* [CP] Copy Pods Resources */,
+				A048E3EB5EBC4332D8D6EF3F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F910F40D1D184F6E007E5C72 /* PBXTargetDependency */,
 			);
 			name = SmartHome;
 			productName = SmartHome;
@@ -284,12 +302,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7FAFD11D140EEC009EF911 /* LaunchScreen.storyboard in Resources */,
+				FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */,
 				FB7FAFCE1D140EEC009EF911 /* Assets.xcassets in Resources */,
 				FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7528011C91E01A26DA88CFB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A28AC8C39BFE3A0AEFEAAC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C051DC02FE6A3E8244B11C1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB7FAFBC1D140EEC009EF911 /* Sources */ = {
@@ -301,19 +368,12 @@
 				F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */,
 				FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */,
 				FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */,
+				FB2FEBB21D32B7540078F85C /* Device.swift in Sources */,
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F910F40D1D184F6E007E5C72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = F910F40C1D184F6E007E5C72 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FB7FAFC71D140EEC009EF911 /* Main.storyboard */ = {
@@ -420,8 +480,13 @@
 		};
 		FB7FAFD61D140EEC009EF911 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45AC2AF87019FC8A9A2EAB52 /* Pods-SmartHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = omri.SmartHome;
@@ -431,8 +496,13 @@
 		};
 		FB7FAFD71D140EEC009EF911 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42151545F1711CDA8057C917 /* Pods-SmartHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartHome",
+				);
 				INFOPLIST_FILE = SmartHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = omri.SmartHome;
