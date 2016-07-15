@@ -13,6 +13,7 @@ public class Device {
     // device info
     var location = "214.265.14.1/webservicelocation.asmx"
     var name = "Device"
+    var isOn:String
     
     // device ui info
     var icon:UIImage
@@ -21,6 +22,7 @@ public class Device {
         self.location = location
         self.name = name
         self.icon = icon
+        self.isOn = "false"
         
     }
 }

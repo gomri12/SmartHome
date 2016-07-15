@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -129,8 +130,8 @@
                                                 <constraint firstAttribute="width" constant="49" id="VyA-2y-BuH"/>
                                             </constraints>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-2N-FNp">
-                                            <rect key="frame" x="70" y="7" width="180" height="56"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-2N-FNp">
+                                            <rect key="frame" x="70" y="8" width="180" height="56"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -168,12 +169,20 @@
                                 <action selector="logoutBTN:" destination="Zbe-cB-YJv" id="XyY-6P-oTd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VHW-zF-4Qj">
-                            <color key="tintColor" red="0.10196078431372549" green="0.56862745098039214" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="addDeviceBTN:" destination="Zbe-cB-YJv" id="IcO-Ox-QYk"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="VHW-zF-4Qj">
+                                <color key="tintColor" red="0.10196078431372549" green="0.56862745098039214" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="addDeviceBTN:" destination="Zbe-cB-YJv" id="IcO-Ox-QYk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="compose" id="V2n-vk-8g3">
+                                <color key="tintColor" red="0.1019607843" green="0.56862745100000001" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Vpq-W6-akI" kind="show" id="8HD-d1-J9K"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="deviceTableView" destination="bY3-JE-64g" id="hL7-EO-JI0"/>
@@ -198,7 +207,57 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="576" y="-1585"/>
+            <point key="canvasLocation" x="622" y="-1593"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="8hw-yB-OTw">
+            <objects>
+                <viewController id="Vpq-W6-akI" customClass="SettingsViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qQJ-bc-tsg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZpN-UD-lfB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eRq-gt-iD7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose your device:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSx-7F-hQ0">
+                                <rect key="frame" x="20" y="92" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="gFa-Ii-RnD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="im6-0a-olX">
+                                <rect key="frame" x="0.0" y="115" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vpq-W6-akI" id="tsE-fD-p0o"/>
+                                    <outlet property="delegate" destination="Vpq-W6-akI" id="veN-CA-va5"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-L1-PFI">
+                                <rect key="frame" x="254" y="486" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hSx-7F-hQ0" firstAttribute="leading" secondItem="eRq-gt-iD7" secondAttribute="leadingMargin" constant="4" id="ebJ-5M-DRc"/>
+                            <constraint firstItem="hSx-7F-hQ0" firstAttribute="top" secondItem="qQJ-bc-tsg" secondAttribute="bottom" constant="45" id="wQA-yu-qna"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Settings" id="VdN-Gr-5mC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="picker" destination="im6-0a-olX" id="7HD-wC-d3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILu-jM-Crt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="-1593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oi9-L2-MHx">

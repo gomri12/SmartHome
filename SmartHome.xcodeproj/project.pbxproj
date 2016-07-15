@@ -12,6 +12,7 @@
 		F9577CFA1D17F677005F7F25 /* UIViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */; };
 		FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */; };
 		FB2FEBB21D32B7540078F85C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FEBB11D32B7540078F85C /* Device.swift */; };
+		FB3EA7A11D39488A00F237B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */; };
 		FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */; };
 		FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */; };
 		FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFC71D140EEC009EF911 /* Main.storyboard */; };
@@ -20,68 +21,16 @@
 		FB7FAFD11D140EEC009EF911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F910F3FE1D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		F910F4001D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		F910F4021D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		F910F4041D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		F910F4061D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		F910F4081D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		F910F40A1D184E64007E5C72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		42151545F1711CDA8057C917 /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
 		45AC2AF87019FC8A9A2EAB52 /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
-		F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableCell.swift; sourceTree = "<group>"; };
 		F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
 		FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB091F011D312CC3003DEFAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		FB2FEBB11D32B7540078F85C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FB469E991D32A279007B72E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		FB469EA21D32A285007B72E1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FB469EA41D32A296007B72E1 /* SmartHome */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SmartHome; sourceTree = "<group>"; };
@@ -125,27 +74,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F910F3F51D184E64007E5C72 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F910F3FF1D184E64007E5C72 /* Alamofire.framework */,
-				F910F4011D184E64007E5C72 /* Alamofire iOS Tests.xctest */,
-				F910F4031D184E64007E5C72 /* Alamofire.framework */,
-				F910F4051D184E64007E5C72 /* Alamofire OSX Tests.xctest */,
-				F910F4071D184E64007E5C72 /* Alamofire.framework */,
-				F910F4091D184E64007E5C72 /* Alamofire tvOS Tests.xctest */,
-				F910F40B1D184E64007E5C72 /* Alamofire.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FB7FAFB71D140EEC009EF911 = {
 			isa = PBXGroup;
 			children = (
 				FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */,
 				FB7FAFC21D140EEC009EF911 /* SmartHome */,
 				FB7FAFC11D140EEC009EF911 /* Products */,
-				F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */,
 				63FB89C1677339ECC94E8025 /* Pods */,
 				7B13997292C2987BAD4AF819 /* Frameworks */,
 			);
@@ -174,6 +108,7 @@
 				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
 				FB091F011D312CC3003DEFAF /* Firebase.framework */,
 				FB2FEBB11D32B7540078F85C /* Device.swift */,
+				FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -227,70 +162,12 @@
 			mainGroup = FB7FAFB71D140EEC009EF911;
 			productRefGroup = FB7FAFC11D140EEC009EF911 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = F910F3F51D184E64007E5C72 /* Products */;
-					ProjectRef = F910F3F41D184E64007E5C72 /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FB7FAFBF1D140EEC009EF911 /* SmartHome */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		F910F3FF1D184E64007E5C72 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = F910F3FE1D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F4011D184E64007E5C72 /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = F910F4001D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F4031D184E64007E5C72 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = F910F4021D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F4051D184E64007E5C72 /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = F910F4041D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F4071D184E64007E5C72 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = F910F4061D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F4091D184E64007E5C72 /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = F910F4081D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F910F40B1D184E64007E5C72 /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = F910F40A1D184E64007E5C72 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FB7FAFBE1D140EEC009EF911 /* Resources */ = {
@@ -366,6 +243,7 @@
 				FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */,
 				FB2FEBB21D32B7540078F85C /* Device.swift in Sources */,
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
+				FB3EA7A11D39488A00F237B8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
