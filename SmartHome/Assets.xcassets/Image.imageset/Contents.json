@@ -6,11 +6,7 @@
     },
     {
       "idiom" : "universal",
-<<<<<<< HEAD
-      "filename" : "^912E127C8F62C58BCFD7D0218D22C5E0CBF74C046B9E015BBC^pimgpsh_thumbnail_win_distr.jpg",
-=======
-      "filename" : "speaker_icon.png",
->>>>>>> origin/master
+      "filename" : "light_icon.png",
       "scale" : "2x"
     },
     {
