@@ -31,9 +31,6 @@
 		FB091F011D312CC3003DEFAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		FB2FEBB11D32B7540078F85C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		FB469E991D32A279007B72E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		FB469EA21D32A285007B72E1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		FB469EA41D32A296007B72E1 /* SmartHome */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SmartHome; sourceTree = "<group>"; };
 		FB7FAFC01D140EEC009EF911 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,9 +64,6 @@
 		7B13997292C2987BAD4AF819 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB469EA41D32A296007B72E1 /* SmartHome */,
-				FB469EA21D32A285007B72E1 /* libc++.tbd */,
-				FB469E991D32A279007B72E1 /* libicucore.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
