@@ -13,12 +13,12 @@ class DeviceListTableViewController: UIViewController, UITableViewDelegate, UITa
     // MARK: Properties
     @IBOutlet var deviceTableView: UITableView!
 
-    var items: [Device] = [Device(location: "",name: "Bedroom TV",icon: UIImage(named: "Image")!),
-                           Device(location: "",name: "Livingroom TV",icon: UIImage(named: "Image-1")!),
-                           Device(location: "",name: "Kitchen TV",icon: UIImage(named: "Image-2")!),
-                           Device(location: "",name: "Front Lights",icon: UIImage(named: "Image-3")!),
-                           Device(location: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-4")!),
-                           Device(location: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-5")!)]
+    var items: [Device] = [Device(url: "",name: "Bedroom TV",icon: UIImage(named: "Image")!),
+                           Device(url: "",name: "Livingroom TV",icon: UIImage(named: "Image-1")!),
+                           Device(url: "",name: "Kitchen TV",icon: UIImage(named: "Image-2")!),
+                           Device(url: "",name: "Front Lights",icon: UIImage(named: "Image-3")!),
+                           Device(url: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-4")!),
+                           Device(url: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-5")!)]
     
     @IBAction func logoutBTN(sender: AnyObject) {
         self.performSegueWithIdentifier("login", sender: nil)

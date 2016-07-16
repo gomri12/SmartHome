@@ -9,12 +9,42 @@
 import Foundation
 import Firebase
 import UIKit
+import CoreLocation
+import MapKit
 
-class SettingsViewController : UIViewController{
+
+class SettingsViewController : UIViewController, CLLocationManagerDelegate{
+    
+    // noy code start here
+    // this class implements CLLocationManagerDelagate
+    
+    lazy var locationManager: CLLocationManager! = {
+        let manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.delegate = self
+        manager.requestAlwaysAuthorization()
+        return manager
+    }()
+    
+    @IBAction func saveTapped(sender: AnyObject) {
+        let devIdx = picker.selectedRowInComponent(0)
+        print("add device \(items[devIdx].name) state to list of device rules, fire background updates if needed")
+        // TODO:save radios and center location get from ui...
+        items[devIdx].setRule(CLLocationCoordinate2D(latitude: 32.4,longitude: 22), radiosTrigger: 34)
+        // start monitoring the geofencing state of this device -> in appDelegate
+        locationManager.startMonitoringForRegion(items[devIdx].geoFence!)
+        //check time sampling
+    }
+    // noy code ends here
     
     @IBOutlet weak var picker: UIPickerView!
-    
-    var colors = ["SAVTA!!!!!","Noy","Tal"]
+
+    var items: [Device] = [Device(url: "",name: "Bedroom TV",icon: UIImage(named: "Image")!),
+                           Device(url: "",name: "Livingroom TV",icon: UIImage(named: "Image-1")!),
+                           Device(url: "",name: "Kitchen TV",icon: UIImage(named: "Image-2")!),
+                           Device(url: "",name: "Front Lights",icon: UIImage(named: "Image-3")!),
+                           Device(url: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-4")!),
+                           Device(url: "",name: "Bedroom Air Conditioner",icon: UIImage(named: "Image-5")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +60,13 @@ class SettingsViewController : UIViewController{
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return items.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return colors[row]
+        return items[row].name
     }
+    
+    
     
 }
