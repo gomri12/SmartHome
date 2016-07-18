@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginBTN(sender: AnyObject) {
+        
+        
         FIRAuth.auth()?.createUserWithEmail(usernameTB.text!, password: passwordTB.text!, completion: {
             user, error in
             if error != nil{
@@ -52,6 +54,7 @@ class ViewController: UIViewController {
             }
             else{
                 print("user is logged")
+                self.performSegueWithIdentifier("firstNav", sender: nil)                
             }
         })
     }

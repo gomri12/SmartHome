@@ -15,8 +15,10 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-    
+
     let locationManager = CLLocationManager()
+    
+    var items: [Device] = []
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        
+
+        
         return true
     }
 
@@ -51,15 +56,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         self.saveContext()
     }
     
-    func handleRegionEvent(region: CLRegion!) {
-        print("Geofence triggered!")
+    // finds device based on its unique id
+    func getDeviceFromIdentifier(identifier: String) -> Device? {
+        let ref = FIRDatabase.database().reference()
+        let user = FIRAuth.auth()?.currentUser
+        let userRef = ref.child((user?.uid)!)
+        
+        userRef.observeSingleEventOfType(.Value, withBlock: {(snapshot : FIRDataSnapshot) in
+            
+            for item in snapshot.children{
+                let device = Device(snapshot: item as! FIRDataSnapshot)
+                self.items.append(device)
+            }
+            
+        })
+        
+        for savedItem in items {
+            if savedItem.uniqueID == identifier {
+                return savedItem
+            }
+        }
+        return nil
     }
+
+    // handles location geofence event
+    func handleRegionEvent(region: CLRegion!,entry:Bool) {
+        guard let eventDevice = getDeviceFromIdentifier(region.identifier) else {
+            print("cant find device for ID: \(region.identifier)")
+            //locationManager.stopMonitoringForRegion(circularRegion)
+            return
+        }
+        if entry && region.notifyOnEntry {
+            print("Geofence Entry triggered! for Device ID: \(eventDevice.uniqueID), Name: \(eventDevice.name)")
+            // turn the device on
+            eventDevice.turnSwitch(true)
+        }
+        else if !entry && region.notifyOnExit{
+            print("Geofence Exit triggered! for Device ID: \(eventDevice.uniqueID), Name: \(eventDevice.name)")
+            // turn the device off
+            eventDevice.turnSwitch(false)
+        }
+    }
+    
+    // location manager delegate for entry to a region of a device
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         if region is CLCircularRegion {
-            handleRegionEvent(region)
+            handleRegionEvent(region,entry:true)
         }
     }
 
+    // location manager delegate for exit from a region of a device
+    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleRegionEvent(region,entry:false)
+        }
+    }
 
     // MARK: - Core Data stack
 
