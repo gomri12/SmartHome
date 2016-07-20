@@ -59,7 +59,7 @@ class SettingsViewController : UIViewController, CLLocationManagerDelegate, MKMa
     
     @IBAction func saveTapped(sender: AnyObject) {
         let devIdx = picker.selectedRowInComponent(0)
-        // TODO:save radios and center location get from ui...
+
         
         // annotation for coordinate
         let lastAnnotation = self.mapView.annotations[0]
@@ -80,6 +80,12 @@ class SettingsViewController : UIViewController, CLLocationManagerDelegate, MKMa
 
     @IBAction func forgetBTN(sender: UIButton) {
         stopMonitoringDevice(items[picker.selectedRowInComponent(0)])
+        
+        let alertController = UIAlertController(title: "Removed Device From Raduis TurnON", message:
+            "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func stopMonitoringDevice(device: Device) {
@@ -91,8 +97,6 @@ class SettingsViewController : UIViewController, CLLocationManagerDelegate, MKMa
             }
         }
     }
-    
-    // noy code ends here
     
     @IBOutlet weak var picker: UIPickerView!
 
@@ -131,6 +135,7 @@ class SettingsViewController : UIViewController, CLLocationManagerDelegate, MKMa
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return items.count

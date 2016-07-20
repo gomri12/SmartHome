@@ -64,23 +64,28 @@ public class Device {
         self.geoFence?.notifyOnExit = switchOffOnExit
     }
     
-    func turnSwitch(state: Bool) -> Bool{
-        let parameters: [String: AnyObject] = [
-            "Id" : "1",
-            "Action" : "false"
-        ]
+    func turnSwitch(state: Bool,id: String) -> Bool{
+        
+        var parameters: [String: AnyObject] = [:]
+        if(state){
+            parameters =   ["Id" : id,
+                            "Action" : "true"]
+        }else{
+            parameters =   ["Id" : id,
+                            "Action" : "false"]
+        }
         
 
         Alamofire.request(.GET, "http://site.aplit-soft.com:8080/Services/tmp/index.aspx",parameters: parameters)
             .responseString { response in
                 print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
+                //print(response.response) // URL response
+                //print(response.data)     // server data
+               // print(response.result)   // result of response serialization
                 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+               // if let JSON = response.result.value {
+               //     print("JSON: \(JSON)")
+               // }
         }
      return false
     }

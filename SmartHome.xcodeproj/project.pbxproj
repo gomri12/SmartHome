@@ -14,11 +14,20 @@
 		FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */; };
 		FB2FEBB21D32B7540078F85C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2FEBB11D32B7540078F85C /* Device.swift */; };
 		FB3EA7A11D39488A00F237B8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */; };
+		FB457AC21D3F8DA800259C3C /* airconditioner_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457ABC1D3F8DA800259C3C /* airconditioner_icon.png */; };
+		FB457AC31D3F8DA800259C3C /* fridge_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457ABD1D3F8DA800259C3C /* fridge_icon.png */; };
+		FB457AC41D3F8DA800259C3C /* light_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457ABE1D3F8DA800259C3C /* light_icon.png */; };
+		FB457AC51D3F8DA800259C3C /* speakers_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB457ABF1D3F8DA800259C3C /* speakers_icon.jpg */; };
+		FB457AC61D3F8DA800259C3C /* tv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457AC01D3F8DA800259C3C /* tv_icon.png */; };
+		FB457AC71D3F8DA800259C3C /* washing machime_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB457AC11D3F8DA800259C3C /* washing machime_icon.jpg */; };
+		FB457ACA1D3F8DB600259C3C /* default_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457AC81D3F8DB600259C3C /* default_icon.png */; };
+		FB457ACB1D3F8DB600259C3C /* Pixel logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB457AC91D3F8DB600259C3C /* Pixel logo.png */; };
+		FB457ACD1D3F950F00259C3C /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB457ACC1D3F950F00259C3C /* AddDeviceViewController.swift */; };
+		FB457ACF1D3F9AF000259C3C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB457ACE1D3F9AF000259C3C /* ImageCell.swift */; };
 		FB4FBBFF1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4FBBFE1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift */; };
 		FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */; };
 		FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */; };
 		FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFC71D140EEC009EF911 /* Main.storyboard */; };
-		FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */; };
 		FB7FAFCE1D140EEC009EF911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */; };
 		FB7FAFD11D140EEC009EF911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -30,16 +39,25 @@
 		F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableCell.swift; sourceTree = "<group>"; };
 		F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtentions.swift; sourceTree = "<group>"; };
-		FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB091F011D312CC3003DEFAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		FB2FEBB11D32B7540078F85C /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB457ABC1D3F8DA800259C3C /* airconditioner_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airconditioner_icon.png; sourceTree = "<group>"; };
+		FB457ABD1D3F8DA800259C3C /* fridge_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fridge_icon.png; sourceTree = "<group>"; };
+		FB457ABE1D3F8DA800259C3C /* light_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_icon.png; sourceTree = "<group>"; };
+		FB457ABF1D3F8DA800259C3C /* speakers_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = speakers_icon.jpg; sourceTree = "<group>"; };
+		FB457AC01D3F8DA800259C3C /* tv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tv_icon.png; sourceTree = "<group>"; };
+		FB457AC11D3F8DA800259C3C /* washing machime_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "washing machime_icon.jpg"; sourceTree = "<group>"; };
+		FB457AC81D3F8DB600259C3C /* default_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_icon.png; sourceTree = "<group>"; };
+		FB457AC91D3F8DB600259C3C /* Pixel logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pixel logo.png"; sourceTree = "<group>"; };
+		FB457ACC1D3F950F00259C3C /* AddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		FB457ACE1D3F9AF000259C3C /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		FB4FBBFE1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicePointAnnotation.swift; sourceTree = "<group>"; };
 		FB7FAFC01D140EEC009EF911 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FB7FAFC81D140EEC009EF911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB7FAFCB1D140EEC009EF911 /* SmartHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartHome.xcdatamodel; sourceTree = "<group>"; };
 		FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7FAFD01D140EEC009EF911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7FAFD21D140EEC009EF911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,10 +92,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FB7FAFB71D140EEC009EF911 = {
+		FB457AB71D3E70E900259C3C /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				FB7FAFC71D140EEC009EF911 /* Main.storyboard */,
+				FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		FB457AB81D3E712D00259C3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */,
+				FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */,
+				F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */,
+				F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */,
+				FB457ACC1D3F950F00259C3C /* AddDeviceViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FB457AB91D3E71C300259C3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB2FEBB11D32B7540078F85C /* Device.swift */,
+				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
+				FB4FBBFE1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FB457ABA1D3E720900259C3C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				FB0313AD1D31B9E600963588 /* GoogleService-Info.plist */,
+				FB7FAFD21D140EEC009EF911 /* Info.plist */,
+				FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */,
+				FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */,
+				FB457ACE1D3F9AF000259C3C /* ImageCell.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		FB457ABB1D3F8D6600259C3C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FB457AC81D3F8DB600259C3C /* default_icon.png */,
+				FB457AC91D3F8DB600259C3C /* Pixel logo.png */,
+				FB457ABC1D3F8DA800259C3C /* airconditioner_icon.png */,
+				FB457ABD1D3F8DA800259C3C /* fridge_icon.png */,
+				FB457ABE1D3F8DA800259C3C /* light_icon.png */,
+				FB457ABF1D3F8DA800259C3C /* speakers_icon.jpg */,
+				FB457AC01D3F8DA800259C3C /* tv_icon.png */,
+				FB457AC11D3F8DA800259C3C /* washing machime_icon.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FB7FAFB71D140EEC009EF911 = {
+			isa = PBXGroup;
+			children = (
 				FB7FAFC21D140EEC009EF911 /* SmartHome */,
 				FB7FAFC11D140EEC009EF911 /* Products */,
 				63FB89C1677339ECC94E8025 /* Pods */,
@@ -96,20 +171,12 @@
 		FB7FAFC21D140EEC009EF911 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
-				FB7FAFC31D140EEC009EF911 /* AppDelegate.swift */,
-				F9577CF91D17F677005F7F25 /* UIViewControllerExtentions.swift */,
-				FB7FAFCF1D140EEC009EF911 /* LaunchScreen.storyboard */,
-				FB7FAFC71D140EEC009EF911 /* Main.storyboard */,
-				FB7FAFCD1D140EEC009EF911 /* Assets.xcassets */,
-				F910F4101D186454007E5C72 /* DeviceListTableViewController.swift */,
-				FB7FAFC51D140EEC009EF911 /* LoginViewController.swift */,
-				FB7FAFD21D140EEC009EF911 /* Info.plist */,
-				FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */,
-				F910F41C1D18749F007E5C72 /* DeviceTableCell.swift */,
+				FB457ABB1D3F8D6600259C3C /* Images */,
+				FB457AB91D3E71C300259C3C /* Model */,
+				FB457AB81D3E712D00259C3C /* Controllers */,
+				FB457AB71D3E70E900259C3C /* Layouts */,
+				FB457ABA1D3E720900259C3C /* Utility */,
 				FB091F011D312CC3003DEFAF /* Firebase.framework */,
-				FB2FEBB11D32B7540078F85C /* Device.swift */,
-				FB3EA7A01D39488A00F237B8 /* SettingsViewController.swift */,
-				FB4FBBFE1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -180,10 +247,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB457AC71D3F8DA800259C3C /* washing machime_icon.jpg in Resources */,
 				FB7FAFD11D140EEC009EF911 /* LaunchScreen.storyboard in Resources */,
+				FB457AC31D3F8DA800259C3C /* fridge_icon.png in Resources */,
 				FB0313AE1D31B9E600963588 /* GoogleService-Info.plist in Resources */,
+				FB457ACB1D3F8DB600259C3C /* Pixel logo.png in Resources */,
 				FB7FAFCE1D140EEC009EF911 /* Assets.xcassets in Resources */,
 				FB7FAFC91D140EEC009EF911 /* Main.storyboard in Resources */,
+				FB457AC41D3F8DA800259C3C /* light_icon.png in Resources */,
+				FB457AC61D3F8DA800259C3C /* tv_icon.png in Resources */,
+				FB457AC51D3F8DA800259C3C /* speakers_icon.jpg in Resources */,
+				FB457AC21D3F8DA800259C3C /* airconditioner_icon.png in Resources */,
+				FB457ACA1D3F8DB600259C3C /* default_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,12 +320,13 @@
 				F9577CFA1D17F677005F7F25 /* UIViewControllerExtentions.swift in Sources */,
 				F910F4111D186454007E5C72 /* DeviceListTableViewController.swift in Sources */,
 				F910F41D1D18749F007E5C72 /* DeviceTableCell.swift in Sources */,
-				FB7FAFCC1D140EEC009EF911 /* SmartHome.xcdatamodeld in Sources */,
 				FB7FAFC61D140EEC009EF911 /* LoginViewController.swift in Sources */,
 				FB2FEBB21D32B7540078F85C /* Device.swift in Sources */,
 				FB4FBBFF1D3BA8E300FF9CE5 /* DevicePointAnnotation.swift in Sources */,
 				FB7FAFC41D140EEC009EF911 /* AppDelegate.swift in Sources */,
+				FB457ACD1D3F950F00259C3C /* AddDeviceViewController.swift in Sources */,
 				FB3EA7A11D39488A00F237B8 /* SettingsViewController.swift in Sources */,
+				FB457ACF1D3F9AF000259C3C /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,19 +489,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FB7FAFCA1D140EEC009EF911 /* SmartHome.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FB7FAFCB1D140EEC009EF911 /* SmartHome.xcdatamodel */,
-			);
-			currentVersion = FB7FAFCB1D140EEC009EF911 /* SmartHome.xcdatamodel */;
-			path = SmartHome.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FB7FAFB81D140EEC009EF911 /* Project object */;
 }

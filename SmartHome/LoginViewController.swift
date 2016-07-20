@@ -13,17 +13,19 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet weak var usernameTB: UITextField!
+    @IBOutlet weak var passwordTB: UITextField!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        self.errorMessageLabel.hidden = true
         self.hideKeyboardWhenTappedAround()
         navigationItem.hidesBackButton = true
         
     }
 
-    @IBOutlet weak var usernameTB: UITextField!
-    
-    @IBOutlet weak var passwordTB: UITextField!
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,8 +33,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginBTN(sender: AnyObject) {
-        
-        
+
         FIRAuth.auth()?.createUserWithEmail(usernameTB.text!, password: passwordTB.text!, completion: {
             user, error in
             if error != nil{
@@ -51,6 +52,7 @@ class ViewController: UIViewController {
             
             if error != nil{
                 print("something wrong")
+                self.errorMessageLabel.hidden = false
             }
             else{
                 print("user is logged")

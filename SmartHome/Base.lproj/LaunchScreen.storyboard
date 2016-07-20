@@ -16,7 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-7" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-Ps-2nf">
+                                <rect key="frame" x="115" y="240" width="370" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="1Co-8N-yDa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9j-Jh-LEN">
+                                <rect key="frame" x="136" y="169" width="158" height="94"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.36078431370000003" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bst-Ps-2nf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TpY-ZQ-Yuy"/>
+                            <constraint firstItem="x9j-Jh-LEN" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="149" id="fgu-eX-zPO"/>
+                            <constraint firstItem="Bst-Ps-2nf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="neI-w1-LFK"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="x9j-Jh-LEN" secondAttribute="bottom" constant="337" id="wEi-vP-nU1"/>
+                            <constraint firstItem="x9j-Jh-LEN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="136" id="yjQ-Er-ucn"/>
+                            <constraint firstItem="Bst-Ps-2nf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="220" id="zu6-Of-lQt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image-7" width="248" height="81"/>
+    </resources>
 </document>

@@ -27,9 +27,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
-
+        getDevices()
         
         return true
+    }
+    
+    func getDevices()->Void{
+        let ref = FIRDatabase.database().reference()
+        let user = FIRAuth.auth()?.currentUser
+        let userRef = ref.child((user?.uid)!)
+        
+        userRef.observeSingleEventOfType(.Value, withBlock: {(snapshot : FIRDataSnapshot) in
+            
+            for item in snapshot.children{
+                let device = Device(snapshot: item as! FIRDataSnapshot)
+                self.items.append(device)
+            }
+            
+        })
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -58,18 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     // finds device based on its unique id
     func getDeviceFromIdentifier(identifier: String) -> Device? {
-        let ref = FIRDatabase.database().reference()
-        let user = FIRAuth.auth()?.currentUser
-        let userRef = ref.child((user?.uid)!)
-        
-        userRef.observeSingleEventOfType(.Value, withBlock: {(snapshot : FIRDataSnapshot) in
-            
-            for item in snapshot.children{
-                let device = Device(snapshot: item as! FIRDataSnapshot)
-                self.items.append(device)
-            }
-            
-        })
+
         
         for savedItem in items {
             if savedItem.uniqueID == identifier {
@@ -78,23 +82,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         return nil
     }
-
+    
+    func getDevicePosition(identifier: String) -> Int{
+        var index=0
+        for savedItem in items {
+            if savedItem.uniqueID == identifier {
+                return index
+            }
+            index += 1
+        }
+        return -1
+    }
     // handles location geofence event
     func handleRegionEvent(region: CLRegion!,entry:Bool) {
         guard let eventDevice = getDeviceFromIdentifier(region.identifier) else {
             print("cant find device for ID: \(region.identifier)")
-            //locationManager.stopMonitoringForRegion(circularRegion)
+            locationManager.stopMonitoringForRegion(region)
             return
         }
         if entry && region.notifyOnEntry {
             print("Geofence Entry triggered! for Device ID: \(eventDevice.uniqueID), Name: \(eventDevice.name)")
             // turn the device on
-            eventDevice.turnSwitch(true)
+            eventDevice.turnSwitch(true,id: String(getDevicePosition(eventDevice.uniqueID)))
         }
         else if !entry && region.notifyOnExit{
             print("Geofence Exit triggered! for Device ID: \(eventDevice.uniqueID), Name: \(eventDevice.name)")
             // turn the device off
-            eventDevice.turnSwitch(false)
+            eventDevice.turnSwitch(false,id: String(getDevicePosition(eventDevice.uniqueID)))
         }
     }
     

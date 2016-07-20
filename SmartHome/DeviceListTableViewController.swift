@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 import Firebase
 
-class DeviceListTableViewController:  UITableViewController{
+class DeviceListTableViewController:  UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     // MARK: Properties
     @IBOutlet var deviceTableView: UITableView!
     let ref = FIRDatabase.database().reference()
     let user = FIRAuth.auth()?.currentUser
+    let devicesDic : [String: String] = ["Speakers":"Image-1","A/C" : "Image-2","Washing Machine": "Image-3","Television": "Image-4","Refrigerator":"Image-5","Lamp": "Image"	]
+    let devicesNames = ["Speakers","A/C" ,"Washing Machine","Television","Refrigerator","Lamp"]
     var deleteDeviceIndexPath: NSIndexPath? = nil
     var items: [Device] = []
     
@@ -59,13 +61,21 @@ class DeviceListTableViewController:  UITableViewController{
                                       message: nil,
                                       preferredStyle: .Alert)
         
+        let pickerFrame: CGRect = CGRectMake(100, 150, 270, 100); // CGRectMake(left), top, width, height) - left and top are like margins
+        let picker: UIPickerView = UIPickerView(frame: pickerFrame);
+        picker.delegate = self;
+        picker.dataSource = self;
+        
+        alert.view.addSubview(picker)
+        
         let addAction = UIAlertAction(title: "Add",style: .Default) { (action: UIAlertAction!) -> Void in
             
             
             let name = alert.textFields![0]
             let url = alert.textFields![1]
+
             
-            let deviceItem = Device(url: url.text! ,name: name.text!, imageName: "Image")
+            let deviceItem = Device(url: url.text! ,name: name.text!, imageName: self.devicesDic[self.devicesNames[picker.selectedRowInComponent(0)]]!)
             
             
             let deviceItemRef = self.ref.child((self.user?.uid)!).child(deviceItem.uniqueID)
@@ -96,15 +106,26 @@ class DeviceListTableViewController:  UITableViewController{
                               animated: true,
                               completion: nil)
         
-    }
+    }	
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:DeviceTableCell = self.deviceTableView.dequeueReusableCellWithIdentifier("cell") as! DeviceTableCell
         
         cell.deviceLabel.text = self.items[indexPath.row].name
         cell.deviceImage.image = self.items[indexPath.row].icon
-        
+        cell.deviceSwitch.tag = indexPath.row
+        cell.deviceSwitch.addTarget(self, action: #selector(DeviceListTableViewController.stateChanged(_:)), forControlEvents: UIControlEvents.ValueChanged )
         return cell
+    }
+    
+    func stateChanged(switchState: UISwitch) {
+        if switchState.on {
+            print("Switch on row ",switchState.tag,": is On")
+            items[switchState.tag].turnSwitch(true,id: String(switchState.tag+1))
+        }else{
+            print("Switch on row ",switchState.tag,": is OFF")
+            items[switchState.tag].turnSwitch(false,id: String(switchState.tag+1))
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -129,8 +150,26 @@ class DeviceListTableViewController:  UITableViewController{
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return devicesNames.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return devicesNames[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+
+    }
+    
     func handleDeleteDevice(alertAction: UIAlertAction!) -> Void {
-        // 1
+
         print("Delete was pressed")
         let userRef = ref.child((user?.uid)!)
         let deleteDevice = items[(deleteDeviceIndexPath?.row)!]
