@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class DeviceListTableViewController:  UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource{
+class DeviceListTableViewController:  UITableViewController{
     // MARK: Properties
     @IBOutlet var deviceTableView: UITableView!
     let ref = FIRDatabase.database().reference()
@@ -56,55 +56,7 @@ class DeviceListTableViewController:  UITableViewController,UIPickerViewDelegate
     
     @IBAction func addDeviceBTN(sender: AnyObject) {
         
-        // Alert View for input
-        let alert = UIAlertController(title: "Add Device",
-                                      message: nil,
-                                      preferredStyle: .Alert)
-        
-        let pickerFrame: CGRect = CGRectMake(100, 150, 270, 100); // CGRectMake(left), top, width, height) - left and top are like margins
-        let picker: UIPickerView = UIPickerView(frame: pickerFrame);
-        picker.delegate = self;
-        picker.dataSource = self;
-        
-        alert.view.addSubview(picker)
-        
-        let addAction = UIAlertAction(title: "Add",style: .Default) { (action: UIAlertAction!) -> Void in
-            
-            
-            let name = alert.textFields![0]
-            let url = alert.textFields![1]
-
-            
-            let deviceItem = Device(url: url.text! ,name: name.text!, imageName: self.devicesDic[self.devicesNames[picker.selectedRowInComponent(0)]]!)
-            
-            
-            let deviceItemRef = self.ref.child((self.user?.uid)!).child(deviceItem.uniqueID)
-            
-            
-            deviceItemRef.setValue(deviceItem.toAnyObject())
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .Default) { (action: UIAlertAction) -> Void in
-        }
-        
-        
-        alert.addTextFieldWithConfigurationHandler {
-            (textField: UITextField!) -> Void in
-            textField.placeholder = "Device Name"
-        }
-        
-        alert.addTextFieldWithConfigurationHandler {
-            (textField: UITextField!) -> Void in
-            textField.placeholder = "Device URL"
-        }
-        
-        alert.addAction(addAction)
-        alert.addAction(cancelAction)
-        
-        presentViewController(alert,
-                              animated: true,
-                              completion: nil)
+        self.performSegueWithIdentifier("addDevice", sender: nil)
         
     }	
     
@@ -151,22 +103,6 @@ class DeviceListTableViewController:  UITableViewController,UIPickerViewDelegate
     }
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return devicesNames.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return devicesNames[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-
-    }
     
     func handleDeleteDevice(alertAction: UIAlertAction!) -> Void {
 

@@ -40,6 +40,17 @@ class AddDeviceViewController: UIViewController,UICollectionViewDataSource,UICol
     }
     
     @IBAction func addBTN(sender: AnyObject) {
+        
+        let deviceItem = Device(url:deviceURLTB.text!  ,name: deviceNameTB.text!, imageName: devicesNames[itemSelected])
+        
+        
+        let deviceItemRef = self.ref.child((self.user?.uid)!).child(deviceItem.uniqueID)
+        
+        
+        deviceItemRef.setValue(deviceItem.toAnyObject())
+        
+        self.performSegueWithIdentifier("devices", sender: nil)
+        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,7 +67,8 @@ class AddDeviceViewController: UIViewController,UICollectionViewDataSource,UICol
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        <#code#>
+        itemSelected = indexPath.row
+        collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.redColor()
     }
     
     

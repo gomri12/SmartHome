@@ -186,7 +186,6 @@
                                 <color key="tintColor" red="0.10196078431372549" green="0.56862745098039214" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addDeviceBTN:" destination="Zbe-cB-YJv" id="IcO-Ox-QYk"/>
-                                    <segue destination="64v-Ho-B46" kind="show" id="tCR-NP-kAG"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="compose" id="V2n-vk-8g3">
@@ -201,7 +200,7 @@
                         <outlet property="deviceTableView" destination="bY3-JE-64g" id="hL7-EO-JI0"/>
                         <outlet property="searchDisplayController" destination="Snf-zS-zek" id="xbz-tL-4YT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="login" id="hpE-Bu-BoY"/>
-                        <segue destination="64v-Ho-B46" kind="show" id="05I-je-dvL"/>
+                        <segue destination="64v-Ho-B46" kind="show" identifier="addDevice" id="C7f-M0-OHA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S99-Si-dxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,7 +220,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="642" y="-1585"/>
+            <point key="canvasLocation" x="716" y="-1593"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8hw-yB-OTw">
@@ -345,7 +344,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1117" y="-1593"/>
+            <point key="canvasLocation" x="1185" y="-1598"/>
         </scene>
         <!--Add New Device-->
         <scene sceneID="Y9W-Sf-MRI">
@@ -463,11 +462,12 @@
                         <outlet property="collectionView" destination="jwg-Fu-kri" id="R8H-Rp-z8s"/>
                         <outlet property="deviceNameTB" destination="y8o-qk-XYu" id="2gu-cr-Vfh"/>
                         <outlet property="deviceURLTB" destination="rlp-gz-UEP" id="Cgo-b4-cbP"/>
+                        <segue destination="Zbe-cB-YJv" kind="show" identifier="devices" id="boG-4k-CJ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckm-gY-J1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="-1585"/>
+            <point key="canvasLocation" x="1721" y="-1577"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oi9-L2-MHx">
@@ -494,6 +494,6 @@
         <image name="Image-6" width="70" height="70"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tCR-NP-kAG"/>
+        <segue reference="boG-4k-CJ0"/>
     </inferredMetricsTieBreakers>
 </document>
